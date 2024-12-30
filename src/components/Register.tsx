@@ -60,25 +60,39 @@ export default function Register() {
         setErrors(newErrors);
         return Object.values(newErrors).every(error => error === '');
     };
+   
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         if (validateForm()) {
-
-            // Simulación de respuesta exitosa
-            const mockResponse = { result: 'success' };
-
-            if (mockResponse.result === 'success') {
-
-                // Guardar los datos en localStorage
-                localStorage.setItem('formData', JSON.stringify(formData));
-
-                // Redirigir al usuario a la página de login después del registro exitoso
-                navigate('/login'); 
-            } else {
-            }
+            fetch('http://18.175.168.152:8000/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    nombre: formData.nombre,
+                    email: formData.email,
+                    password: formData.password,
+                    confirmPassword: formData.confirmPassword,
+                }), 
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message === 'Datos registrados exitosamente') {
+                    localStorage.setItem('formData', JSON.stringify(formData));
+                    navigate('/login');
+                } else {
+                    console.error('Error:', data);
+                }
+            })
+            .catch(error => {
+                console.error('Hubo un error con la solicitud:', error);
+            });
         }
     };
+    
+    
 
     return (
         <div className="flex items-center justify-center min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 p-4">
