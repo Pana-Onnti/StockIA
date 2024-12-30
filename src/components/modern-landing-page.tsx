@@ -3,12 +3,21 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { TabsContent, TabsList, TabsTrigger, Tabs } from "@/components/ui/tabs"
 import { Brain, TrendingUp, Shield, Zap, ArrowRight, Briefcase, Bot, Sparkles } from "lucide-react"
 import { Bar, BarChart, Line, LineChart, Pie, PieChart, ResponsiveContainer, XAxis, YAxis, Tooltip, Legend } from "recharts"
+import { useNavigate } from 'react-router-dom';
 
 
 import { useTranslation } from 'react-i18next';
 
 
+
 export function ModernLandingPageComponent() {
+
+  const navigate = useNavigate();
+
+
+  const handleLearnMore = () => {
+    navigate('/register'); // Navega a la página de Register
+  };
 
   const { t } = useTranslation();
 
@@ -52,7 +61,6 @@ export function ModernLandingPageComponent() {
   return (
     <div className="flex flex-col min-h-screen w-full bg-gradient-to-b from-gray-900 to-gray-800 text-white">
 
-      #header
       <header className="px-4 lg:px-6 h-16 flex items-center backdrop-blur-lg bg-gray-900/50 sticky top-0 z-50">
         <a className="flex items-center justify-center" href="#">
           <Briefcase className="h-6 w-6 text-blue-400" />
@@ -62,20 +70,25 @@ export function ModernLandingPageComponent() {
           <a className="text-sm font-medium hover:text-blue-400 transition-colors" href="#">
             {t('header.aiPortfolio')}
           </a>
-          <a className="text-sm font-medium hover:text-blue-400 transition-colors" href="#">
-            {t('header.performance')}
-          </a>
-          <a className="text-sm font-medium hover:text-blue-400 transition-colors" href="#">
+
+          {/* Enlaces de navegación usando 'onClick' para cambiar las rutas */}
+          <a
+            className="text-sm font-medium hover:text-blue-400 transition-colors cursor-pointer"
+            onClick={handleLearnMore}
+          >
             {t('header.aboutUs')}
           </a>
-          <a className="text-sm font-medium hover:text-blue-400 transition-colors" href="#">
+
+          <a
+            className="text-sm font-medium hover:text-blue-400 transition-colors cursor-pointer"
+            onClick={handleLearnMore}
+          >
             {t('header.contact')}
           </a>
         </nav>
       </header>
 
 
-      #firstsubheader
       <main className="flex-1 w-full">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="">
@@ -89,10 +102,12 @@ export function ModernLandingPageComponent() {
                 </p>
               </div>
               <div className="space-x-4">
-                <Button className="bg-blue-600 text-white hover:bg-blue-700" size="lg">
+                <Button className="bg-blue-600 text-white hover:bg-blue-700" size="lg" onClick={handleLearnMore}
+                >
                   {t('firstsubheader.startInvesting')}
                 </Button>
-                <Button className="bg-blue-600 text-white hover:bg-blue-700" size="lg">
+                <Button className="bg-blue-600 text-white hover:bg-blue-700" size="lg" onClick={handleLearnMore}
+                >
                   {t('firstsubheader.learnMore')}
                 </Button>
               </div>
@@ -249,7 +264,6 @@ export function ModernLandingPageComponent() {
 
 
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-900">
-          #cards advantajes
           <div className="px-4 md:px-6 lg:px-12">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
               {t('advantage.title')}
@@ -283,7 +297,6 @@ export function ModernLandingPageComponent() {
           </div>
         </section>
 
-        #metrics
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-800">
           <div className="px-4 md:px-6 lg:px-12">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
@@ -335,7 +348,6 @@ export function ModernLandingPageComponent() {
           </div>
         </section>
 
-        #prefooter
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-gray-900 to-gray-800">
           <div className="px-4 md:px-6 lg:px-12">
             <div className="flex flex-col items-center space-y-4 text-center">
@@ -348,7 +360,7 @@ export function ModernLandingPageComponent() {
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
-                <Button className="w-full bg-blue-600 text-white hover:bg-blue-700" size="lg">
+                <Button className="w-full bg-blue-600 text-white hover:bg-blue-700" size="lg" onClick={handleLearnMore}                >
                   {t('section.getStarted')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -356,8 +368,6 @@ export function ModernLandingPageComponent() {
             </div>
           </div>
         </section>
-
-
 
 
       </main>

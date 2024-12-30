@@ -25,11 +25,15 @@ i18n
             },
             accuracy: {
               title: 'Superior Accuracy',
-              description: 'Machine learning models enhanced algorithmically achieve 99.9% accuracy in market predictions, far surpassing conventional methods.',
+              description: 'Machine learning models enhanced algorithmically achieve 69.9% accuracy in market predictions, far surpassing conventional methods.',
             },
             resilience: {
               title: 'Algorithmic Resilience',
               description: 'Our portfolios exhibit 40% greater resilience against market shocks due to algorithm-driven risk assessment and mitigation strategies.',
+            },
+            backtesting: {
+              title: 'Algorithmic Backtesting',
+              description: 'Allow users to test different investment strategies before applying them to the real market through backtesting.',
             },
           },
           metrics: {
@@ -64,26 +68,26 @@ i18n
             learnMore: 'Learn More',
           },
           firstcards: {
-            algorithmicLeapTitle: 'Transformación Algorítmica',
+            algorithmicLeapTitle: 'Algorithmic Transformation',
             algoSelectTitle: 'AlgoSelect™ Portfolio',
-            algoSelectDescription: 'Selección de portafolios impulsada por IA',
-            algoSelectContent: 'Nuestro producto insignia utiliza algoritmos avanzados para analizar datos del mercado y crear portafolios optimizados adaptados a tu perfil de riesgo.',
-            exploreAlgoSelect: 'Explora AlgoSelect™',
+            algoSelectDescription: 'AI-Powered Portfolio Selection',
+            algoSelectContent: 'Our flagship product uses advanced algorithms to analyze market data and create optimized portfolios tailored to your risk profile.',
+            exploreAlgoSelect: 'Explore AlgoSelect™',
             algorithmicHedgeTitle: 'Algorithmic Hedge™',
-            algorithmicHedgeDescription: 'Gestión avanzada de riesgos',
-            algorithmicHedgeContent: 'Aprovecha la computación algorítmica para cubrir dinámicamente tu portafolio contra la volatilidad del mercado y eventos inesperados.',
-            discoverAlgorithmicHedge: 'Descubre Algorithmic Hedge™',
-            advancedReportingTitle: 'Informes Avanzados',
-            advancedReportingDescription: 'Perspectivas y análisis comprensivos',
-            advancedReportingContent: 'Obtén acceso a informes avanzados que proporcionan detalles sobre el rendimiento de tu portafolio, exposición al riesgo y estrategias de optimización.',
-            learnAboutReporting: 'Aprende sobre Informes Avanzados',
+            algorithmicHedgeDescription: 'Advanced Risk Management',
+            algorithmicHedgeContent: 'Leverage algorithmic computing to dynamically hedge your portfolio against market volatility and unexpected events.',
+            discoverAlgorithmicHedge: 'Discover Algorithmic Hedge™',
+            advancedReportingTitle: 'Advanced Reporting',
+            advancedReportingDescription: 'Comprehensive insights and analysis',
+            advancedReportingContent: 'Gain access to advanced reports that provide details on your portfolio performance, risk exposure, and optimization strategies.',
+            learnAboutReporting: 'Learn about Advanced Reporting',
           },
           header: {
-            title: 'StockAI Finanzas',
-            aiPortfolio: 'Portafolio de IA',
-            performance: 'Desempeño',
-            aboutUs: 'Sobre Nosotros',
-            contact: 'Contacto',
+            title: 'StockAI',
+            aiPortfolio: 'AI Portfolio',
+            performance: 'Performance',
+            aboutUs: 'About Us',
+            contact: 'Contact',
           },
           agentsCards: {
             sectionTitle: 'AI Agents and Machine Learning Models',
@@ -105,7 +109,7 @@ i18n
       es: {
         translation: {
           footer: {
-            copyright: '© 2024 Mi Empresa',
+            copyright: '© 2024 StockAI Finanzas',
             termsOfService: 'Términos de Servicio',
             privacy: 'Política de Privacidad',
           },
@@ -124,19 +128,19 @@ i18n
             title: 'Potencia Algorítmica para tu Inversión',
             speed: {
               title: 'Velocidad Inigualable',
-              description: 'Nuestras soluciones algorítmicas procesan datos del mercado 1000 veces más rápido que los sistemas tradicionales, facilitando la optimización de tu cartera en tiempo real.',
+              description: 'Nuestras soluciones algorítmicas procesan datos del mercado 100 veces más rápido que los sistemas tradicionales, facilitando la optimización de tu cartera en tiempo real.',
             },
             accuracy: {
               title: 'Precisión Superior',
-              description: 'Modelos de aprendizaje automático mejorados algorítmicamente logran una precisión del 99.9% en predicciones del mercado, superando ampliamente los métodos convencionales.',
+              description: 'Modelos de aprendizaje automático mejorados algorítmicamente logran una precisión del 69.9% en predicciones del mercado, superando ampliamente los métodos convencionales.',
             },
             resilience: {
-              title: 'Resiliencia Algorítmica',
-              description: 'Nuestras carteras muestran una resiliencia un 40% mayor frente a los shocks del mercado gracias a estrategias de evaluación y mitigación de riesgos impulsadas por algoritmos.',
+              title: 'Backtesting Algorítmico',
+              description: 'Permitir a los usuarios probar diferentes estrategias de inversión antes de implementarlas en el mercado real mediante backtesting.',
             },
           },
           metrics: {
-            title: 'Métricas de Rendimiento Optimizadas Algorítmicamente',
+            title: 'Métricas de Rendimiento Optimizadas',
             tabs: {
               returns: 'Rendimientos',
               volatility: 'Volatilidad',
@@ -154,9 +158,9 @@ i18n
           },
           customSection: {
             algorithmicLeapTitle: '¿Listo para dar un salto algorítmico en tus inversiones?',
-            algorithmicLeapDescription: 'Únete a Invest hoy y experimenta el futuro de la inversión optimizada por algoritmos.',
-            advantageSpeed: 'Velocidad Inigualable: Nuestras soluciones algorítmicas procesan datos del mercado 1000 veces más rápido que los sistemas tradicionales, facilitando la optimización de tu cartera en tiempo real.',
-            advantageAccuracy: 'Precisión Superior: Modelos de aprendizaje automático mejorados algorítmicamente logran una precisión del 99.9% en predicciones del mercado, superando ampliamente los métodos convencionales.',
+            algorithmicLeapDescription: 'Únete hoy y experimenta el futuro de la inversión optimizada por algoritmos.',
+            advantageSpeed: 'Recomendaciones de inversión personalizadas basadas en su perfil de riesgo, objetivos financieros y preferencias.',
+            advantageAccuracy:  'Permitir que los usuarios optimicen sus portfolios usando algoritmos de Hierarchical Risk Parity (HRP) para maximizar el rendimiento ajustado al riesgo',
             advantageResilience: 'Resiliencia Algorítmica: Nuestras carteras muestran una resiliencia un 40% mayor frente a los shocks del mercado gracias a estrategias de evaluación y mitigación de riesgos impulsadas por algoritmos.',
             portfolioTitle: 'Asignación de Cartera Algorítmica',
           },
@@ -176,7 +180,7 @@ i18n
             learnAboutReporting: 'Aprende sobre Informes Avanzados',
           },
           header: {
-            title: 'StockAI Finanzas',
+            title: 'StockAI',
             aiPortfolio: 'Portafolio de IA',
             performance: 'Desempeño',
             aboutUs: 'Sobre Nosotros',
@@ -196,15 +200,14 @@ i18n
               content: 'Utilizando redes neuronales profundas y algoritmos de última generación, estos modelos ofrecen predicciones confiables y personalizadas.',
               buttonText: 'Explora los Modelos de ML',
             },
-            
           },
         },
       },
     },
-    lng: 'es', // idioma por defecto
-    fallbackLng: 'en', // idioma de reserva
+    lng: 'es', // default language
+    fallbackLng: 'en', // fallback language
     interpolation: {
-      escapeValue: false, // no se necesita para React
+      escapeValue: false, // no need for React
     },
   });
 
