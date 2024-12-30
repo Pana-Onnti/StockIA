@@ -85,6 +85,21 @@ i18n
             aboutUs: 'Sobre Nosotros',
             contact: 'Contacto',
           },
+          agentsCards: {
+            sectionTitle: 'AI Agents and Machine Learning Models',
+            cardOne: {
+              title: 'AI Agents',
+              description: 'Our AI agents are designed to analyze market data and make real-time investment decisions.',
+              content: 'With a flexible architecture, our AI agents can adapt to any market changes and provide valuable insights to maximize return on investment.',
+              buttonText: 'Discover more about AI Agents',
+            },
+            cardTwo: {
+              title: 'Machine Learning Models',
+              description: 'Our advanced machine learning models accurately predict market trends and optimize your portfolio.',
+              content: 'Using deep neural networks and state-of-the-art algorithms, these models offer reliable and personalized predictions.',
+              buttonText: 'Explore ML Models',
+            },
+          },
         },
       },
       es: {
@@ -166,6 +181,22 @@ i18n
             performance: 'Desempeño',
             aboutUs: 'Sobre Nosotros',
             contact: 'Contacto',
+          },
+          agentsCards:{
+            sectionTitle: 'Agentes de IA y Modelos de Aprendizaje Automático',
+            cardOne: {
+              title: 'Agentes de IA',
+              description: 'Nuestros agentes de IA están diseñados para analizar datos del mercado y tomar decisiones de inversión en tiempo real.',
+              content: 'Con una arquitectura flexible, nuestros agentes de IA pueden adaptarse a cualquier cambio del mercado y ofrecer insights valiosos para maximizar el retorno de inversión.',
+              buttonText: 'Descubre más sobre Agentes de IA',
+            },
+            cardTwo: {
+              title: 'Modelos de Aprendizaje Automático',
+              description: 'Nuestros modelos de aprendizaje automático avanzados predicen con precisión las tendencias del mercado y optimizan tu cartera.',
+              content: 'Utilizando redes neuronales profundas y algoritmos de última generación, estos modelos ofrecen predicciones confiables y personalizadas.',
+              buttonText: 'Explora los Modelos de ML',
+            },
+            
           },
         },
       },

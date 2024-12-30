@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { TabsContent, TabsList, TabsTrigger, Tabs } from "@/components/ui/tabs"
-import { Brain, TrendingUp, Shield, Zap, ArrowRight, Briefcase } from "lucide-react"
+import { Brain, TrendingUp, Shield, Zap, ArrowRight, Briefcase, Bot, Sparkles } from "lucide-react"
 import { Bar, BarChart, Line, LineChart, Pie, PieChart, ResponsiveContainer, XAxis, YAxis, Tooltip, Legend } from "recharts"
 
 
@@ -77,30 +77,29 @@ export function ModernLandingPageComponent() {
 
       #firstsubheader
       <main className="flex-1 w-full">
-      <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
-    <div className="">
-      <div className="flex flex-col items-center space-y-4 text-center">
-        <div className="space-y-3">
-          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
-            {t('firstsubheader.portfolioSelectionTitle')}
-          </h1>
-          <p className="mx-auto max-w-[700px] text-zinc-200 md:text-xl lg:text-2xl">
-            {t('firstsubheader.portfolioSelectionDescription')}
-          </p>
-        </div>
-        <div className="space-x-4">
-          <Button className="bg-blue-600 text-white hover:bg-blue-700" size="lg">
-            {t('firstsubheader.startInvesting')}
-          </Button>
-          <Button className="bg-blue-600 text-white hover:bg-blue-700" size="lg">
-            {t('firstsubheader.learnMore')}
-          </Button>
-        </div>
-      </div>
-    </div>
-  </section>
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+          <div className="">
+            <div className="flex flex-col items-center space-y-4 text-center">
+              <div className="space-y-3">
+                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+                  {t('firstsubheader.portfolioSelectionTitle')}
+                </h1>
+                <p className="mx-auto max-w-[700px] text-zinc-200 md:text-xl lg:text-2xl">
+                  {t('firstsubheader.portfolioSelectionDescription')}
+                </p>
+              </div>
+              <div className="space-x-4">
+                <Button className="bg-blue-600 text-white hover:bg-blue-700" size="lg">
+                  {t('firstsubheader.startInvesting')}
+                </Button>
+                <Button className="bg-blue-600 text-white hover:bg-blue-700" size="lg">
+                  {t('firstsubheader.learnMore')}
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        #firstcards
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-800">
           <div className="px-4 md:px-6 lg:px-12">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
@@ -152,7 +151,6 @@ export function ModernLandingPageComponent() {
 
 
 
-        #maingraf
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-900">
           <div className="px-4 md:px-6 lg:px-12">
             <div className="grid gap-6 lg:grid-cols-2 items-center">
@@ -201,11 +199,56 @@ export function ModernLandingPageComponent() {
           </div>
         </section>
 
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-800">
+          <div className="px-4 md:px-6 lg:px-12">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
+              {t('agentsCards.sectionTitle')}
+            </h2>
+            <div className="grid gap-4 lg:grid-cols-2">
+              <Card className="bg-gray-900 border-gray-800">
+                <CardHeader>
+                  <Bot className="h-8 w-8 mb-2 text-green-400" />
 
-        <div className="my-12 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+                  <CardTitle className="text-green-400">{t('agentsCards.cardOne.title')}</CardTitle>
+                  <CardDescription className="text-gray-400">
+                    {t('agentsCards.cardOne.description')}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-300">
+                    {t('agentsCards.cardOne.content')}
+                  </p>
+                  <Button variant="link" className="mt-4 text-green-400">
+                    {t('agentsCards.cardOne.buttonText')}
+                  </Button>
+                </CardContent>
+              </Card>
+              <Card className="bg-gray-900 border-gray-800">
+                <CardHeader>
+                  <Sparkles className="h-8 w-8 mb-2 text-yellow-400" />
+
+
+                  <CardTitle className="text-yellow-400">{t('agentsCards.cardTwo.title')}</CardTitle>
+                  <CardDescription className="text-gray-400">
+                    {t('agentsCards.cardTwo.description')}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-300">
+                    {t('agentsCards.cardTwo.content')}
+                  </p>
+                  <Button variant="link" className="mt-4 text-yellow-400">
+                    {t('agentsCards.cardTwo.buttonText')}
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+
 
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-900">
-
           #cards advantajes
           <div className="px-4 md:px-6 lg:px-12">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
