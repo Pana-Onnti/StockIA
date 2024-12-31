@@ -65,7 +65,7 @@ export default function Register() {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         if (validateForm()) {
-            fetch('http://18.175.168.152:8000/register', {
+            fetch('https://18.175.168.152:8000/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
