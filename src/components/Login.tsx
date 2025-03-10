@@ -77,7 +77,7 @@ export default function Login() {
 
 
                     <CardDescription className="text-center text-3xl  text-red-700">
-                    El acceso anticipdo a la plataforma se encuentra cerrado, estara disponible a partir del 15 de mayo
+                    El acceso anticipado a la plataforma se encuentra cerrado, estara disponible a partir del 15 de mayo
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
