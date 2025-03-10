@@ -25,7 +25,7 @@ export default function Register() {
     const navigate = useNavigate();
 
     //change 
-    const url = 'https://44.220.160.70:8000/';
+    const url = 'https://44.220.160.70:433/';
 
     const togglePasswordVisibility = () => setShowPassword(!showPassword);
     const toggleConfirmPasswordVisibility = () => setShowConfirmPassword(!showConfirmPassword);
