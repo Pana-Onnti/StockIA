@@ -24,6 +24,9 @@ export default function Register() {
 
     const navigate = useNavigate();
 
+    //change 
+    const url = 'https://44.220.160.70:8000/';
+
     const togglePasswordVisibility = () => setShowPassword(!showPassword);
     const toggleConfirmPasswordVisibility = () => setShowConfirmPassword(!showConfirmPassword);
 
@@ -65,7 +68,7 @@ export default function Register() {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         if (validateForm()) {
-            fetch('https://18.175.168.152:8000/register', {
+            fetch(url+'/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
