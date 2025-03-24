@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Label } from "@/components/ui/label";
 import { EyeIcon, EyeOffIcon } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { supabase } from '@/lib/supabase'; // Asegurate de tener este archivo con tu client
 
 export default function Register() {
     const [showPassword, setShowPassword] = useState(false);
@@ -23,9 +24,6 @@ export default function Register() {
     });
 
     const navigate = useNavigate();
-
-    //change 
-    const url = 'https://44.220.160.70';
 
     const togglePasswordVisibility = () => setShowPassword(!showPassword);
     const toggleConfirmPasswordVisibility = () => setShowConfirmPassword(!showConfirmPassword);
@@ -63,39 +61,28 @@ export default function Register() {
         setErrors(newErrors);
         return Object.values(newErrors).every(error => error === '');
     };
-   
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (validateForm()) {
-            fetch(url+'/register', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    nombre: formData.nombre,
-                    email: formData.email,
-                    password: formData.password,
-                    confirmPassword: formData.confirmPassword,
-                }), 
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.message === 'Datos registrados exitosamente') {
-                    localStorage.setItem('formData', JSON.stringify(formData));
-                    navigate('/login');
-                } else {
-                    console.error('Error:', data);
-                }
-            })
-            .catch(error => {
-                console.error('Hubo un error con la solicitud:', error);
-            });
+            const { error } = await supabase
+                .from('registertable')
+                .insert([
+                    {
+                        user: formData.nombre,
+                        email: formData.email,
+                        password: formData.password,
+                    }
+                ]);
+
+            if (!error) {
+                localStorage.setItem('formData', JSON.stringify(formData));
+                navigate('/login');
+            } else {
+                console.error('Error al registrar:', error.message);
+            }
         }
     };
-    
-    
 
     return (
         <div className="flex items-center justify-center min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 p-4">
